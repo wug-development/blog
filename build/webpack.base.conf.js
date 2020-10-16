@@ -32,7 +32,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -74,6 +74,32 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader', {
+            loader: 'ts-loader',
+            options: {appendTsxSuffixTo: [/\.vue$/]}
+          }
+        ]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: Object.assign(vueLoaderConfig, {
+          loader: {
+            ts: 'ts-loader',
+            tsx: 'babel-loader!ts-loader'
+          }
+        })
+      },
+      {
+        test: /\tsx?$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
       }
     ]
   },
@@ -88,5 +114,10 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
+  },
+  // 表示不需要webpack打包的文件 
+  externals: {
+    'vue': 'Vue',
+    'element-ui': 'ElementUI'
   }
 }
