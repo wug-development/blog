@@ -13,7 +13,7 @@
                 <div class="about-title">关于博客</div>
                 <div class="about-detail">
                     <div>域名：www.wuguang.website</div>
-                    <div>环境：Windows + Node Express + TiDB</div>
+                    <div>环境：Windows + Node + KOA2 + MySql2</div>
                     <div>前端：VUE + Typescript + ElementUI + Sass</div>
                     <div>服务器：阿里云</div>
                     <div>备案号：京ICP备 16025808号-1</div>
