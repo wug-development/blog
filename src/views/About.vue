@@ -6,6 +6,7 @@
                 <div class="about-detail">
                     <div>邮箱：wuguang407906079@163.com</div>
                     <div>微信：wuguang1723 &nbsp;&nbsp;&nbsp;&nbsp; 暗号：博客</div>
+                    <div>Q Q：407906079</div>
                     <div>其它：再写吧</div>
                 </div>
             </div>
@@ -13,8 +14,9 @@
                 <div class="about-title">关于博客</div>
                 <div class="about-detail">
                     <div>域名：www.wuguang.website</div>
-                    <div>环境：Windows + Node + KOA2 + MySql2</div>
-                    <div>前端：VUE + Typescript + ElementUI + Sass</div>
+                    <div>前端：VUE + Typescript + Sass</div>
+                    <div>后台：VUE + Typescript + ElementUI + Sass</div>
+                    <div>服务端：Windows + Node + KOA2 + MySql2</div>
                     <div>服务器：阿里云</div>
                     <div>备案号：京ICP备 16025808号-1</div>
                 </div>
